@@ -1,0 +1,21 @@
+<h4>Song List</h4>
+
+<ul class="list-group">
+    <li *ngFor="let song of songList; 
+        let i = index; 
+        let isFirst = first
+        let isLast = last
+        let isEven = even
+        let isOdd = odd"               
+        class="list-group-item"
+        [ngClass]="{
+            'list-group-item-success': isEven,
+            'list-group-item-primary': isOdd
+        }">
+        <span class="text-primary">{{ i + 1}}.</span>
+        {{song.name}} - {{song.artist}}
+    </li>
+
+    <span></span>
+    
+</ul>

@@ -1,0 +1,26 @@
+<h1>Songs</h1>
+
+<hr>
+
+<div>
+    <p>
+        <strong>Description.</strong> This project was created using Angular, Typescript and Bootstrap.  
+    </p>
+    <p>
+        On the left-side you can see a song list with the following characteristics:
+    </p>
+    <ul>
+        <li>All songs with even position will be painted <strong style="color: blue;">blue</strong>.</li>
+        <li>All songs with odd position will be painted <strong style="color: green;">green</strong>.</li>
+    </ul>
+</div>
+
+<div class="row">
+    <div class="col">
+        <song-list [songList]="songs"></song-list>
+    </div>
+
+    <div class="col">
+       <add-song></add-song>
+    </div>
+</div>
