@@ -1,5 +1,5 @@
 <h4>Add song</h4>
-<form class="row">
+<form class="row" (ngSubmit)="emitSong()">
     <input 
         type="text" 
         [(ngModel)]="song.name" 
@@ -14,7 +14,5 @@
         class="form-control mb-2" 
         placeholder="Artist">
 
-    <button type="submit" class="btn btn-primary" (click)="emitSong()">Add</button>
-
-    <!-- <pre>{{song | json}}</pre> -->
+    <button type="submit" class="btn btn-primary">Add</button>
 </form>

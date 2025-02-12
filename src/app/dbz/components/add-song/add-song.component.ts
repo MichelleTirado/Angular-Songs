@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { Song } from '../../interfaces/song.interface';
 
 @Component({
@@ -8,12 +8,24 @@ import { Song } from '../../interfaces/song.interface';
 })
 export class AddSongComponent {
 
+  @Output()
+  public onNewSong: EventEmitter<Song> = new EventEmitter();
+
   public song: Song = {
     name: '',
     artist: ''
   };
 
   emitSong(): void {
-    console.log(this.song);
+
+    if(this.song.name.length === 0) return;
+
+    this.onNewSong.emit(this.song);
+
+    this.song = {
+      name: '',
+      artist: ''
+    };
+    
   }
 }

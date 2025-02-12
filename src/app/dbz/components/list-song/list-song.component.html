@@ -2,20 +2,20 @@
 
 <ul class="list-group">
     <li *ngFor="let song of songList; 
-        let i = index; 
-        let isFirst = first
-        let isLast = last
+        let i = index;
         let isEven = even
         let isOdd = odd"               
-        class="list-group-item"
+        class="list-group-item d-flex justify-content-between align-items-center"
         [ngClass]="{
             'list-group-item-success': isEven,
             'list-group-item-primary': isOdd
         }">
-        <span class="text-primary">{{ i + 1}}.</span>
-        {{song.name}} - {{song.artist}}
-    </li>
 
-    <span></span>
-    
+        <div>
+            <span class="text-primary">{{ i + 1}}.</span>
+            {{song.name}} - {{song.artist}}
+        </div>
+        
+        <button class="btn btn-danger" (click)="onDeleteSong(song.id)">Delete</button>
+    </li>
 </ul>

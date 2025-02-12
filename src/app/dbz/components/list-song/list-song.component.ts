@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output } from '@angular/core';
 import { Song } from '../../interfaces/song.interface';
 
 @Component({
@@ -14,4 +14,13 @@ export class ListSongComponent {
     artist: 'Jhon Lenon'
   }];
 
+  @Output()
+  public onDelete: EventEmitter<string> = new EventEmitter();
+
+  onDeleteSong(id?: string): void {
+    console.log('On delete song - list song', id);
+
+    if(!id) return;
+    this.onDelete.emit(id);
+  }
  }
