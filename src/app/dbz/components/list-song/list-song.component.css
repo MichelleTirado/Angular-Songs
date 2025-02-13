@@ -1,3 +1,60 @@
 :host {
   display: block;
 }
+
+.btn-primary{
+  background-color: #a28dcf;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 15px;
+}
+
+.btn-primary:hover {
+  background-color: #8b75c5;
+}
+
+.btn-danger {
+  background-color: #e57373;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 12px;
+}
+
+.btn-danger:hover {
+  background-color: #d9534f;
+}
+
+.list-group-item-success {
+  background-color: #d8f0e1 !important; 
+}
+
+.list-group-item-primary {
+  background-color: #e4d7fa !important;
+}
+
+.scrollable-list {
+  max-height: 268px;
+  overflow-y: auto;
+  padding-right: 5px;
+  scrollbar-width: thin;
+  scrollbar-color: #b185db #fdfcfb;
+}
+
+.scrollable-list::-webkit-scrollbar {
+  width: 8px; /* Tamaño del scrollbar */
+  background: transparent;
+}
+
+.scrollable-list::-webkit-scrollbar-track {
+  background: transparent; 
+  border-radius: 10px;
+}
+
+.scrollable-list::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #b185db, #d5b8ff); 
+  border-radius: 10px;
+}
+
+.scrollable-list::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #a774d6, #f3d0ff);
+}

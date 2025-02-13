@@ -17,7 +17,7 @@ export class SongService {
         artist: 'Lana Del Rey'
     },{
         id: uuid(),
-        name: 'Somewhere only we know',
+        name: 'Somewhere Only We Know',
         artist: 'Keane'
     },{
         id: uuid(),

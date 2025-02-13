@@ -4,7 +4,8 @@ html, body, app-root{
     margin: 0;
     display: flex;
     flex-direction: column;
-    background-color: white !important;
+    background-image: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
+   
 }
 
 main {
@@ -16,8 +17,20 @@ main {
 }
 
 footer {
-    background-color: #f8f9fa;
-    border-top: 1px solid #ddd;
+    background-color:  rgba(255, 255, 255, 0.6);
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
     padding: 15px 0;
     text-align: center;
 }
+
+.footer-links i {
+    font-size: 18px; /* Tamaño más visible */
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .footer-links a:hover i {
+    color: #9a7dc4; /* Morado pastel al pasar el mouse */
+  }
+  
+
+

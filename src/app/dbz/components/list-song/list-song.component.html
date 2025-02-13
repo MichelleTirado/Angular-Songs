@@ -1,6 +1,6 @@
-<h4>Song List</h4>
+<h4>Playlist</h4>
 
-<ul class="list-group">
+<ul class="list-group scrollable-list">
     <li *ngFor="let song of songList; 
         let i = index;
         let isEven = even
@@ -19,3 +19,18 @@
         <button class="btn btn-danger" (click)="onDeleteSong(song.id)">Delete</button>
     </li>
 </ul>
+
+<div class="d-flex flex-column mt-3">
+    <button 
+        class="btn btn-primary mt-3" 
+        (click)="exportToPDF()">
+        <i class="bi bi-file-earmark-pdf"></i>
+        Export list as PDF
+    </button>
+    <button 
+        class="btn btn-primary mt-3" 
+        (click)="exportToCSV()">
+        <i class="bi bi-file-earmark-spreadsheet"></i>
+        Export list as CSV
+    </button>
+</div>
